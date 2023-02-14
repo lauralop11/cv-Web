@@ -1,0 +1,166 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+}
+/*général*/
+
+body {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(230, 139, 3);
+}
+
+h1,
+h2 {
+    text-shadow: 0.2rem 0.2rem 0.5rem black;
+}
+/*en-tête header*/
+header {
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+}
+.div-flex-contenant {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.div-flex-item {
+    width: 25%;
+    
+}
+
+/*navigation nav*/
+
+nav {
+    background-color: rgba(50, 50, 50, 0.85);
+}
+
+nav a {
+    color: white;
+    padding: 0.5rem; /*agrandit la zone cliquable d'un lien*/
+    text-decoration: none; /*retire le souligné du lien*/
+    transition: 1s background-color;
+}
+
+nav a:hover {
+    background-color: black;
+    color: rgb(138, 117, 92);
+}
+
+#liensmenu {
+    display:none;
+} 
+
+#burger {
+    color: white;
+    padding: 0.5rem;
+}
+
+ @media screen and (max-width: 899px) {
+     nav:hover #liensmenu {
+     margin: 0;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+ }
+ 
+ }
+/*contenu*/
+
+main section {
+    margin: 7rem 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.div_section {
+    text-align: justify;
+    padding: 1rem;
+}
+
+.div_section p {
+    color: black;
+    text-shadow: none;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+}
+
+/*Pied de page*/
+
+footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'Indie Flower', cursive;
+    background-size: cover;
+    font-size: 1.5rem;
+    padding: 2rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer span {
+    margin: 1rem 2rem;
+    text-shadow: 0.2rem 0.2rem 0.5rem black;
+    
+}
+
+/*Flèche de retour vers le haut de la page*/
+#to_top_arrow {
+    font-size: 3rem;
+    text-shadow: 0.2rem 0.2rem 0.5rem black;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    
+}
+
+/*Ajustements quand la fenêtre du navigateur a au moins 900 pixels de large*/
+@media screen and (min-width: 900px) {
+     header {
+         padding: 3rem;
+         font-size: 1.5rem;
+     }
+     #burger {
+        display:none; 
+     }
+     nav {
+        position: sticky;
+        top: 0;
+     }
+     .div_section {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+     #liensmenu {
+        display: flex;
+        justify-content: center;
+        
+     }
+     #liensmenu a {
+        padding: 1rem;
+     }
+     footer {
+         display: inline-block;
+         width: 100%;
+         text-align: center;
+     }
+
+}

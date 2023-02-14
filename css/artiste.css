@@ -1,0 +1,108 @@
+/*styles propres à la page artiste*/
+
+.div_section img {
+    width: 100%;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgb(37, 37, 37);
+}
+#grille {
+    display:grid;
+    grid-template-areas: 
+    'zone1'
+    'zone4'
+    'zone6'
+    'zone8'
+}
+#image1{
+    grid-area: zone1;
+    }
+    #image2 {
+        grid-area: zone2;
+        display: none;
+    }
+    #image3 {
+        grid-area: zone3;
+        display: none;
+    }
+    #image4 {
+        grid-area: zone4;
+    }
+    #image5{
+        grid-area: zone5;
+        display: none;
+    }
+    #image6{
+        grid-area: zone6;
+    }
+    #image7 {
+        grid-area: zone7;
+        display: none;
+    }
+    #image8 {
+        grid-area: zone8;
+    }
+    #image9 {
+        grid-area: zone9;
+        display: none;
+    }
+    #image10{
+        grid-area: zone10;
+        display: none;
+    }
+
+@media screen and (min-width: 900px){
+    .div_section p:last-child{
+        display: none;
+    }
+  
+
+    #grille {
+        transition: transform 0.5s;
+        display:grid;
+        grid-template-areas: 
+        'zone1 zone2 zone3'
+        'zone4 zone2 zone3'
+        'zone5 zone6 zone6'
+        'zone5 zone6 zone6'
+        'zone7 zone8 zone10'
+        'zone7 zone9 zone10';
+    }
+    #image1:hover, #image2:hover, #image3:hover, #image4:hover, #image5:hover, #image6:hover, #image7:hover, #image8:hover, #image9:hover, #image10:hover {
+        transform: scale(1.5);
+    }
+    #image1{
+    grid-area: zone1;
+    }
+    #image2 {
+        grid-area: zone2;
+        display: block;
+    }
+    #image3 {
+        grid-area: zone3;
+        display: block;
+    }
+    #image4 {
+        grid-area: zone4;
+    }
+    #image5{
+        grid-area: zone5;
+        display: block;
+    }
+    #image6{
+        grid-area: zone6;
+    }
+    #image7 {
+        grid-area: zone7;
+        display: block;
+    }
+    #image8 {
+        grid-area: zone8;
+    }
+    #image9 {
+        grid-area: zone9;
+        display: block;
+    }
+    #image10{
+        grid-area: zone10;
+        display: block;
+    }
+}

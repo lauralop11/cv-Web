@@ -1,0 +1,42 @@
+/*styles pour la page d'accueil*/
+
+/*contenu*/
+
+span {
+    color: white;
+}
+
+.div-flex-contenant-artiste {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.div-flex-item-artiste {
+    width: 35%;
+    box-shadow: grey 0.2rem 0.2rem 0.2rem ;
+} 
+
+/*Contact*/
+#contact img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+/*Ajustements pour écrans d'au moins 900 pixels*/
+@media screen and (min-width: 900px) {
+    .div-flex-item-artiste {
+        width: 20%;
+    }
+    #contact .div_section img {
+        width: 50%;
+        margin-right: 2rem;
+    }
+    #text_contact {
+        display: inline-block;
+        width: 40%;
+        vertical-align:top;
+    }
+    #text_contact p:first-child {
+        margin-top: 0%;
+    }
+}
